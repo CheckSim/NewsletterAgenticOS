@@ -56,3 +56,9 @@ L'agente si avvale di 3 server MCP configurati localmente in `.agents/mcp_config
 1. **`substack`:** Lettura storico articoli e creazione draft online con asset upload.
 2. **`duckduckgo`:** Ricerca web a zero token per lo scouting di trend (con trasparente fallback a tool di ricerca web nativi dell'harness come `search_web`).
 3. **`nano-banana`:** Generazione visiva delle immagini di copertina (con fallback a `generate_image` se disponibile nativamente).
+
+### Regola Inviolabile sull'Esecuzione MCP:
+- In questo ambiente i server MCP sono integrati e accessibili direttamente tramite il tool nativo `call_mcp_tool` (es. `ServerName: "substack"` o `ServerName: "nano-banana"`).
+- **È SEVERAMENTE VIETATO** scrivere o eseguire script intermedi (Node.js, Python, script shell, curl) per effettuare chiamate API a Substack o ad altri servizi quando è presente il server MCP.
+- Tutte le interazioni con Substack (lettura post, recupero bozze, upload immagini, creazione draft) devono avvenire **esclusivamente** invocando `call_mcp_tool` con `ServerName: "substack"` e i relativi `ToolName` (`list_posts`, `get_draft`, `upload_image`, `create_draft_post`, `set_post_body`, `update_draft`).
+- Tutte le generazioni visive devono invocare `call_mcp_tool` con `ServerName: "nano-banana"` e `ToolName: "generate_image"` (oppure il tool nativo `generate_image` se disponibile).

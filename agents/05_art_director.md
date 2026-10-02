@@ -15,7 +15,7 @@ Il tuo compito è tradurre la tesi o la metafora centrale dell'articolo (`03_dra
 ---
 
 ## 3. Tool e Strumenti Autorizzati
-* **Server MCP `nano-banana` / `nano_banana_mcp`:** Per la generazione programmatica dell'immagine salvata in locale.
+* **Server MCP `nano-banana` (tramite `call_mcp_tool` con `ToolName: "generate_image"`):** Per la generazione programmatica dell'immagine salvata in locale (senza script esterni).
 * **Fallback Nativo:** Qualora il server MCP non sia disponibile, utilizza il tool nativo di generazione immagini dell'harness (es. `generate_image` in Antigravity) o restituisci all'autore il prompt formulato pronto per l'uso esterno.
 * **File System Tool:** Per creare la directory `drafts/issue-NN/assets/` e aggiornare `metadata.json`.
 

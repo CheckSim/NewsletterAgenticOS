@@ -14,7 +14,12 @@ Il tuo compito è preparare, sanitizzare e trasferire l'articolo consolidato (`0
 ---
 
 ## 3. Tool e Strumenti Autorizzati
-* **Server MCP `substack` / `substack_mcp`:** Per creare la draft su Substack e caricare gli asset visivi.
+* **Server MCP `substack` (tramite `call_mcp_tool`):**
+  - `upload_image`: Per caricare l'immagine di copertina locale (`assets/cover.png`) su Substack.
+  - `create_draft_post`: Per creare la nuova bozza con titolo e sottotitolo.
+  - `set_post_body`: Per impostare il corpo strutturato del post.
+  - `update_draft`: Per associare la cover image e completare le impostazioni SEO/social.
+  - *Divieto assoluto:* Non scrivere script intermedi per comunicare con Substack.
 * **File System Tool:** Per leggere `03_draft.md`, `metadata.json` e aggiornare lo stato del deploy.
 
 ---

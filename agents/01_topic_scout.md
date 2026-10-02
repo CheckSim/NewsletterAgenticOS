@@ -15,7 +15,7 @@ Il tuo compito è esplorare la frontiera delle novità (ultimi 15-30 giorni), ma
 ---
 
 ## 3. Tool e Strumenti Autorizzati
-* **`substack_mcp` / Substack Server:** Per consultare gli ultimi post pubblicati e i titoli dell'archivio.
+* **Server MCP `substack` (tramite `call_mcp_tool`):** Per consultare gli ultimi post pubblicati (`list_posts`) senza eseguire script intermedi.
 * **Web Search:**
   * Strumento nativo di ricerca web dell'harness (`search_web`, `read_url_content`), OPPURE
   * Server MCP DuckDuckGo (`duckduckgo` con i comandi `search` e `fetch_content`).

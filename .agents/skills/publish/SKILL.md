@@ -12,5 +12,5 @@ Questa skill attiva il sub-agente `agents/06_substack_publisher.md`.
 2. Verifica che `03_draft.md`, `metadata.json` (con titolo scelto) e `assets/cover.png` siano pronti.
 3. Sanitizza il Markdown rimuovendo artefatti non compatibili con Substack.
 4. Mostra all'autore il riquadro di riepilogo pre-deploy e richiedi conferma esplicita (Human-in-the-Loop).
-5. Invoca Substack MCP per caricare la cover e creare la nuova Bozza (Draft) privata.
+5. Invoca Substack MCP direttamente tramite `call_mcp_tool` (`upload_image`, `create_draft_post`, `set_post_body`) per caricare la cover e creare la nuova Bozza (Draft) privata.
 6. Salva l'ID e l'URL in `metadata.json` e restituisci il link privato all'autore.

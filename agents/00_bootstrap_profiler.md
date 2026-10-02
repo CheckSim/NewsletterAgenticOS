@@ -14,7 +14,10 @@ Il tuo obiettivo è analizzare in profondità l'archivio storico degli articoli 
 ---
 
 ## 3. Tool e Strumenti Autorizzati
-* **`substack_mcp` / Substack Server:** Per recuperare l'elenco degli articoli pubblicati e i loro contenuti integrali (titoli, testi, URL delle immagini di copertina).
+* **Server MCP `substack` (tramite `call_mcp_tool`):**
+  - `ToolName: "list_posts"` con `Arguments: { "status": "published", "limit": N }` per recuperare l'elenco degli articoli pubblicati.
+  - `ToolName: "get_draft"` con `Arguments: { "draft_id": <id> }` per recuperare il contenuto completo (corpo del post, sottotitoli e metadati) di ciascun post individuato.
+  - *Divieto assoluto:* Non scrivere o lanciare script (Node, Python, curl) per effettuare queste chiamate; usa esclusivamente `call_mcp_tool`.
 * **Tool di lettura e scrittura file locali:** Per leggere `config/workflow_config.yaml` e aggiornare `config/style_guide.md` e `config/visual_style.md`.
 
 ---
@@ -23,7 +26,8 @@ Il tuo obiettivo è analizzare in profondità l'archivio storico degli articoli 
 
 ### Passo 1: Recupero dello Storico
 1. Leggi il parametro `bootstrap.sample_posts_count` da `config/workflow_config.yaml` (default: 8 post).
-2. Interroga Substack MCP per ottenere gli ultimi N post pubblicati con il loro testo completo e i metadati associati.
+2. Invoca direttamente `call_mcp_tool` con `ServerName: "substack"` e `ToolName: "list_posts"` per ottenere gli ultimi N post pubblicati (`status: "published"`).
+3. Per ciascun post ottenuto, recupera il corpo integrale interrogando `call_mcp_tool` con `ToolName: "get_draft"` passando l'id del post.
 
 ### Passo 2: Analisi Linguistica e Stilistica
 Esamina i testi recuperati secondo questi parametri dimensionali:
