@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "nano-banana": {
+      "command": "npx",
+      "args": ["-y", "nano-banana-mcp"],
+      "env": {
+        "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY_HERE"
+      }
+    },
+    "substack": {
+      "command": "npx",
+      "args": ["-y", "substack-mcp@latest"],
+      "env": {
+        "SUBSTACK_PUBLICATION_URL": "https://your-publication.substack.com/",
+        "SUBSTACK_SESSION_TOKEN": "YOUR_SUBSTACK_SESSION_TOKEN_COOKIE",
+        "SUBSTACK_USER_ID": "YOUR_SUBSTACK_USER_ID"
+      }
+    },
+    "duckduckgo": {
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"]
+    }
+  }
+}

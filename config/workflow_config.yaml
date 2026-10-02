@@ -1,0 +1,35 @@
+# Workflow Configuration for Substack Agentic Editorial Board
+
+editorial:
+  language: "it"
+  publication_name: "Prototypelog"
+  issue_prefix: "issue-"
+  pad_issue_numbers: 2 # es. issue-01, issue-02
+
+bootstrap:
+  sample_posts_count: 8 # Numero di articoli recenti da analizzare via Substack MCP
+  extract_gold_standards: 2
+
+topic_scout:
+  recent_articles_to_check: 5 # Articoli recenti da mappare per evitare duplicati
+  trend_window_days: 30 # Orizzonte temporale di ricerca news e trend
+  pitches_count: 3
+
+packaging:
+  subject_lines_count: 5
+  preview_text_options: 2
+  preview_max_chars: 90
+
+visual:
+  aspect_ratio: "16:9"
+  target_file: "assets/cover.png"
+  default_engine: "nano_banana_mcp"
+  fallback_engine: "native_generate_image"
+
+paths:
+  drafts_dir: "drafts"
+  templates_dir: "templates"
+  agents_dir: "agents"
+  config_dir: "config"
+  style_guide: "config/style_guide.md"
+  visual_style: "config/visual_style.md"

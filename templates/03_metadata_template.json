@@ -1,0 +1,34 @@
+{
+  "issue": "issue-01",
+  "selected_title": "",
+  "selected_subtitle": "",
+  "subject_line_options": {
+    "curiosity_gap": "Esempio: La cosa che nessuno vi dice su...",
+    "direct_benefit": "Esempio: Come velocizzare il workflow del 50%",
+    "provocative": "Esempio: Perché la maggior parte dei tool sbaglia approccio",
+    "counter_intuitive": "Esempio: Meno automazione significa codice migliore",
+    "minimalist": "Esempio: Ripartire dalle basi"
+  },
+  "preview_text_options": [
+    "Opzione 1 (massimo 90 caratteri per ottimizzazione inbox mobile)",
+    "Opzione 2 (sintesi provocatoria o interrogativa alternativa)"
+  ],
+  "end_post_cta": "Cosa ne pensi? Scrivicelo nei commenti qui sotto.",
+  "cover_image": {
+    "local_path": "assets/cover.png",
+    "alt_text": "Descrizione accessibile della copertina",
+    "prompt_used": "",
+    "aspect_ratio": "16:9"
+  },
+  "tags": [
+    "technology",
+    "agents",
+    "software"
+  ],
+  "substack_draft": {
+    "id": null,
+    "web_url": null,
+    "created_at": null,
+    "status": "pending"
+  }
+}

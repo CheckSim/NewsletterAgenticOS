@@ -1,0 +1,34 @@
+# Python virtual environment and caches
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local MCP secrets and sensitive credentials
+.agents/mcp_config.json
+.env
+.env.*
+!.env.example
+
+# Node / JS artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Internal specification document
+specifiche_progetto_substack_multi_agent.md
+
